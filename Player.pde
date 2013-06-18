@@ -9,7 +9,7 @@ class Player {
 
   Player (float _x) {
     x = _x;
-    y = height-diameter-20;    // set along bottom of screen
+    y = height-diameter-20;           // set along bottom of screen
   }
 
   // update position on tilt
@@ -35,6 +35,14 @@ class Player {
       else {
         hitWall = false;
       }
+    }
+
+    // sound of player rolling across screen
+    if (accelData != null) {
+      float rollVol = map(abs(accelData[0]), 0, 10, 0.0, 1.0);     // map max volume to speed of rolling
+      float L = map(x, radius, width-radius, rollVol, 0.0);
+      float R =  map(x, radius, width-radius, 0.0, rollVol);
+      rollSound.setVolume(L, R);                                  // pan
     }
   }
 

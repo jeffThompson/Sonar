@@ -8,6 +8,7 @@ void loadSounds() {
     final String centerClickFilename = "centerClick.wav";                    // click at top of sonar sweep (if specified)
     final String sideSoundFilename = "sideSound_110sine-110sine.wav";        // sound when hitting side of screen
     final String bgSoundFilename = "bgLotsaRandom.wav";                      // background music/sound
+    final String rollSoundFilename = "rollSound.wav";                        // for when the player moves
 
     // sonar sweep
     sonarSweep = new MediaPlayer();
@@ -43,6 +44,13 @@ void loadSounds() {
     fd = assets.openFd(bgSoundFilename);
     bgSound.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
     bgSound.prepare();
+
+    // player moving sound
+    rollSound = new MediaPlayer();
+    assets = this.getAssets();
+    fd = assets.openFd(rollSoundFilename);
+    rollSound.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
+    rollSound.prepare();
   }
 
   // any errors?
