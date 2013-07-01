@@ -16,6 +16,10 @@ void playLevel() {
     if (scanEveryFrame) sonar.runScan();
     sonar.display();
   }
+  
+  // display background field (shows speed better)
+  field.update();
+  field.display();
 
   // display player
   player.move();

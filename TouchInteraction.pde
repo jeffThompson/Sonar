@@ -12,7 +12,7 @@ public boolean dispatchTouchEvent(MotionEvent event) {
   // mouse press to leave intro screen
   else if (introScreen && action == MotionEvent.ACTION_DOWN) {
     introScreen = false;
-    prevMillis = millis();     // set time for new obstacle to appear
+    prevMillis = millis();        // set time for new obstacle to appear
   }
   
   // pass data along when done!

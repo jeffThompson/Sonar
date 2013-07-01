@@ -35,6 +35,7 @@ class SonarObj {
   }
 
   // draw scan onscreen
+  // note: this seems to be a cause of the sketch slowing down (removing push/pop in the for loop helps)
   void display() {
     pushMatrix();
     translate(player.x, player.y);

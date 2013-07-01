@@ -9,6 +9,7 @@ void loadSounds() {
     final String sideSoundFilename = "sideSound_110sine-110sine.wav";        // sound when hitting side of screen
     final String bgSoundFilename = "bgLotsaRandom.wav";                      // background music/sound
     final String rollSoundFilename = "rollSound.wav";                        // for when the player moves
+    final String fieldBeepFilename = "fieldBeep.wav";                        // beep for speed feedback
 
     // sonar sweep
     sonarSweep = new MediaPlayer();
@@ -51,6 +52,13 @@ void loadSounds() {
     fd = assets.openFd(rollSoundFilename);
     rollSound.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
     rollSound.prepare();
+    
+    // player moving sound
+    fieldBeep = new MediaPlayer();
+    assets = this.getAssets();
+    fd = assets.openFd(fieldBeepFilename);
+    fieldBeep.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
+    fieldBeep.prepare();
   }
 
   // any errors?

@@ -33,6 +33,12 @@ void keyPressed() {
     if (bgSound.isPlaying()) bgSound.pause();
     else bgSound.start();
   }
+  
+  // toggle beeps when moving
+  else if (key == 'b') {
+    beepWhenMoving = !beepWhenMoving;
+    if (beepWhenMoving == false && fieldBeep != null) { fieldBeep.pause(); }    // turn off sound
+  }
 
   // # keys reset obstacle list to that # of obs (1-9f)
   else if (key > 49 && key < 58) {

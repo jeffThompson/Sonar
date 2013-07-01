@@ -6,6 +6,7 @@ class Player {
   float x, y;                              // position onscreen (x set as arg, y hardcoded to bottom of screen)
   final int radius = diameter/2;           // for easier collision detection
   boolean hitWall = false;                 // are we hitting the side of the screen?
+  final float maxRollVol = 0.5;            // maximum volume for rolling sound when moving
 
   Player (float _x) {
     x = _x;
@@ -38,11 +39,14 @@ class Player {
     }
 
     // sound of player rolling across screen
-    if (accelData != null) {
-      float rollVol = map(abs(accelData[0]), 0, 10, 0.0, 1.0);     // map max volume to speed of rolling
+    if (x > radius && x < width-radius) {                                 // don't play when against the wall
+      float rollVol = map(abs(accelData[0]), 0, 10, 0.0, maxRollVol);     // map max volume to speed of rolling
       float L = map(x, radius, width-radius, rollVol, 0.0);
       float R =  map(x, radius, width-radius, 0.0, rollVol);
-      rollSound.setVolume(L, R);                                  // pan
+      rollSound.setVolume(L, R);                                          // pan
+    }
+    else {                                                                // if against side, set to silent
+      rollSound.setVolume(0.0, 0.0);
     }
   }
 
