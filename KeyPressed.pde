@@ -40,7 +40,7 @@ void keyPressed() {
     if (beepWhenMoving == false && fieldBeep != null) { fieldBeep.pause(); }    // turn off sound
   }
 
-  // # keys reset obstacle list to that # of obs (1-9f)
+  // # keys reset obstacle list to that # of obs (1-9)
   else if (key > 49 && key < 58) {
     numObstacles = int(key - 48);      // 49 = 1, so 49-48 = 1!
     obstacles.clear();
