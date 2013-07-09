@@ -16,6 +16,12 @@ import java.util.*;                                   // sorting ArrayLists
 SONAR
  Jeff Thompson | 2013 | www.jeffreythompson.org
  
+ Move through a field of items using sonar. Tilt forward to change speed,
+ tilt side-to-side to steer. Tap to sweep sonar left to right (items will
+ be heard as louder beeps).
+ 
+ Best played with headphones to hear the stereo (left/right) sweep of the sonar.
+ 
  Created with generous support from Harvestworks' Cultural Innovation Fund program.
  
  TO DO - TOP PRIORITY
@@ -30,13 +36,14 @@ SONAR
      the stiller you are the faster they go
  
  Keyboard adjustments:
- + O = obstacle visibility (default off)
- + S = sonar scan visibility (default on)
- + D = debug info (default off)
- + E = scan every frame (default on)
- + M = background sound (default on)
- + B = toggle move beeps (default on)
- + 1-9 = set # of obstacles onscreen (starts at 3, increases over time)
+ 'O'   obstacle visibility (default off)
+ 'S'   sonar scan visibility (default on)
+ 'D'   debug info (default off)
+ 'E'   scan every frame (default on)
+ 'M'   background sound (default on)
+ 'B'   toggle move beeps (default on)
+ 'R'   restart
+ 1-9   set # of obstacles onscreen (starts at 3, increases over time)
  
  Required permissions:
  + VIBRATE
@@ -94,7 +101,7 @@ void setup() {
   field = new Field();
 
   // font stuff
-  font = createFont("Sans-Serif", height/36);
+  font = createFont("Monospaced", height/36);
   textAlign(CENTER, CENTER);
 
   // start playing background sound

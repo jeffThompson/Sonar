@@ -60,7 +60,7 @@ void playLevel() {
     textAlign(LEFT, TOP);
     
     String info = "DEGUGGING INFO";
-    info += "\nFPS: " + nf(frameRate, 0,2);
+    info += "\nFPS:   " + nf(frameRate, 0,2);
     info += "\n# OBS: " + numObstacles;
     text(info, 50, 50);
   }

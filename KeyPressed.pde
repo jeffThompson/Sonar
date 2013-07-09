@@ -39,6 +39,11 @@ void keyPressed() {
     beepWhenMoving = !beepWhenMoving;
     if (beepWhenMoving == false && fieldBeep != null) { fieldBeep.pause(); }    // turn off sound
   }
+  
+  // reset
+  else if (key == 'r') {
+    setup();
+  }
 
   // # keys reset obstacle list to that # of obs (1-9)
   else if (key > 49 && key < 58) {

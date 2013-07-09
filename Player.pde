@@ -1,12 +1,15 @@
 
 class Player {
-  final float visionDist = width/3;        // how far can we see (in pixels, when obstacles are visible)
-  final int diameter = 200;                // size of player onscreen
-  final float speed = 10.0;                // multiply sensor reading for faster movement
-  float x, y;                              // position onscreen (x set as arg, y hardcoded to bottom of screen)
-  final int radius = diameter/2;           // for easier collision detection
-  boolean hitWall = false;                 // are we hitting the side of the screen?
-  final float maxRollVol = 0.5;            // maximum volume for rolling sound when moving
+  
+  color fillColor = color(45,130,40);          // what color are you?
+  final int diameter = 200;                    // size of player onscreen
+  final float speed = 10.0;                    // multiply sensor reading for faster movement
+  
+  final float visionDist = width/3;            // how far can we see (in pixels, when obstacles are visible)
+  float x, y;                                  // position onscreen (x set as arg, y hardcoded to bottom of screen)
+  final int radius = diameter/2;               // for easier collision detection
+  boolean hitWall = false;                     // are we hitting the side of the screen?
+  final float maxRollVol = 0.5;                // maximum volume for rolling sound when moving
 
   Player (float _x) {
     x = _x;
@@ -53,7 +56,7 @@ class Player {
   // display onscreen
   void display() {
     noStroke();
-    fill(255);
+    fill(fillColor);
     ellipse(x, y, diameter, diameter);
   }
 }
