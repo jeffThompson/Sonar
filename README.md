@@ -1,3 +1,5 @@
+!(Screenshot)[https://raw.github.com/jeffThompson/Sonar/master/Screenshots/Gameplay_02.png]
+
 Sonar
 =====
 
