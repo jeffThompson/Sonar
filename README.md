@@ -10,6 +10,11 @@ An auditory game using sonar to track objects across the screen, part of a serie
 
 This game is intended for Android tablet, especially the Nexus 10. Built using [Processing's Android mode](http://www.processing.org).
 
+![Screenshot](https://github.com/jeffThompson/Sonar/blob/master/Screenshots/TitleScreen.png?raw=true)
+![Screenshot](https://github.com/jeffThompson/Sonar/blob/master/Screenshots/Gameplay_00.png?raw=true)
+![Screenshot](https://github.com/jeffThompson/Sonar/blob/master/Screenshots/Gameplay_01.png?raw=true)
+![Screenshot](https://github.com/jeffThompson/Sonar/blob/master/Screenshots/Gameplay_03.png?raw=true)
+
 \- \- \-
 
 \[ all code available under [Creative Commons BY-NC-SA license](http://creativecommons.org/licenses/by-nc-sa/3.0/) - feel free to use but [please let me know](http://www.jeffreythompson.org) \]
